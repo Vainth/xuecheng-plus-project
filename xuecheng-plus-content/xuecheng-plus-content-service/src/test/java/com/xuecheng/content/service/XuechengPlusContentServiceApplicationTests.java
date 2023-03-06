@@ -3,6 +3,8 @@ package com.xuecheng.content.service;
 import com.xuecheng.base.model.PageParams;
 import com.xuecheng.base.model.PageResult;
 import com.xuecheng.content.mapper.CourseBaseMapper;
+import com.xuecheng.content.mapper.CourseCategoryMapper;
+import com.xuecheng.content.model.dto.CourseCategoryTreeDto;
 import com.xuecheng.content.model.dto.QueryCourseParamsDto;
 import com.xuecheng.content.model.po.CourseBase;
 import lombok.extern.slf4j.Slf4j;
@@ -17,12 +19,16 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 @SpringBootTest
 @Slf4j
 class XuechengPlusContentServiceApplicationTests {
     @Autowired
     CourseBaseMapper courseBaseMapper;
+
+    @Autowired
+    CourseCategoryService courseCategoryService;
 
     @Autowired
     CourseBaseInfoService courseBaseInfoService;
@@ -40,6 +46,12 @@ class XuechengPlusContentServiceApplicationTests {
                 queryCourseBaseList(pageParams,new QueryCourseParamsDto());
         System.out.println(pageResult);
 
+    }
+
+    @Test
+    void testqueryTreeNodes() {
+        List<CourseCategoryTreeDto> categoryTreeDtos = courseCategoryService.queryTreeNodes("1");
+        System.out.println(categoryTreeDtos);
     }
 
 }

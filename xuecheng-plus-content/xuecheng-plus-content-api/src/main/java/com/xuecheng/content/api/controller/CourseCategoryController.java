@@ -24,6 +24,13 @@ import java.util.List;
 public class CourseCategoryController {
     @Autowired
     CourseCategoryService courseCategoryService;
+    /**
+     * @description:
+
+     * @return: java.util.List<com.xuecheng.content.model.dto.CourseCategoryTreeDto>
+     * @author: Jie
+     * @date: 2023/3/6 14:27
+     */
 
     @ApiOperation("课程相关查询接口")
     @GetMapping("/course-category/tree-nodes")

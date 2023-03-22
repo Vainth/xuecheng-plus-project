@@ -95,3 +95,10 @@ Content-Type: application/json
   "status" : null,
   "teachPlanId" : 240
 }
+###
+POST http://localhost:8601/api/content/course/list?pageNo=3&pageSize=10
+
+HTTP/1.1 200 OK
+transfer-encoding: chunked
+Content-Type: application/json
+Date: Sun, 11 Sep 2022 09:54:32 GMT

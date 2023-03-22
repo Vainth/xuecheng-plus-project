@@ -55,7 +55,7 @@ public class CourseBaseInfoController {
     @ApiOperation("新增课程基础信息")
     @PostMapping("/course")
     public CourseBaseInfoDto createCourseBase(
-            @RequestBody @Validated({ValidationGroups.Inster.class}) AddCourseDto addCourseDto){
+            @RequestBody @Validated({ValidationGroups.Insert.class}) AddCourseDto addCourseDto){
         //机构id，由于认证系统没有上线暂时硬编码
         Long companyId = 22L;
         return courseBaseInfoService.createCourseBase(companyId,addCourseDto);

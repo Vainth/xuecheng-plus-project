@@ -102,3 +102,14 @@ HTTP/1.1 200 OK
 transfer-encoding: chunked
 Content-Type: application/json
 Date: Sun, 11 Sep 2022 09:54:32 GMT
+
+### 上传文件
+POST http://localhost:63050/media/upload/coursefile
+Content-Type: multipart/form-data; boundary=WebAppBoundary
+
+--WebAppBoundary
+Content-Disposition: form-data; name="filedata"; filename="6666.jpg"; objectName="6666.jpg"
+Content-Type: application/octet-stream
+
+< E:\Pic\6666.jpg
+

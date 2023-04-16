@@ -11,10 +11,10 @@ import java.security.InvalidKeyException;
 import java.security.NoSuchAlgorithmException;
 
 /**
- * @description 测试MinIO
  * @author Mr.M
- * @date 2022/9/11 21:24
  * @version 1.0
+ * @description 测试MinIO
+ * @date 2022/9/11 21:24
  */
 public class MinIOTest {
 
@@ -23,6 +23,7 @@ public class MinIOTest {
                     .endpoint("http://localhost:9000")
                     .credentials("rrHrPokmLAQXAyFm", "qTE2PiCC0YIveGiSFhJkdqs1L7QCQxR6")
                     .build();
+
     //上传文件
     public static void upload() throws IOException, NoSuchAlgorithmException, InvalidKeyException, ServerException, InsufficientDataException, ErrorResponseException, InvalidResponseException, XmlParserException, InternalException {
         UploadObjectArgs objectArgs = UploadObjectArgs.builder()
@@ -35,6 +36,7 @@ public class MinIOTest {
         System.out.println("上传成功");
 
     }
+
     public static void main(String[] args) throws IOException, NoSuchAlgorithmException, InvalidKeyException, ServerException, InsufficientDataException, ErrorResponseException, InvalidResponseException, XmlParserException, InternalException {
         upload();
     }

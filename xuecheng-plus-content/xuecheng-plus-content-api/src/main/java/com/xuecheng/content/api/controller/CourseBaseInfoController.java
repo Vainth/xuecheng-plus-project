@@ -40,9 +40,8 @@ public class CourseBaseInfoController {
     public PageResult<CourseBase> list(PageParams pageParams,
                                        @RequestBody QueryCourseParamsDto queryCourseParams){
 
-        PageResult<CourseBase> courseBasePageResult = courseBaseInfoService.
+        return courseBaseInfoService.
                 queryCourseBaseList(pageParams, queryCourseParams);
-        return courseBasePageResult;
     }
 
     /**

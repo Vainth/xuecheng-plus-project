@@ -6,7 +6,7 @@ spring:
 
   cloud:
     nacos:
-      server-addr: 1.116.157.121:8848
+      server-addr: localhost:8848
       discovery:
         namespace: dev
         group: xuecheng-plus-project
